@@ -1,0 +1,11 @@
+package com.ayush;                              // the file in which code is there
+
+import java.util.Scanner;                       //it comes automatically when "Scanner" is typed
+
+public class Main {                             //regular syntax
+    public static void main(String[] args)      //regular syntax
+    {
+        Scanner input = new Scanner(System.in); //input is given
+        System.out.println(input.nextLine());   //output is printed
+    }
+}
