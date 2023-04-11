@@ -1,0 +1,13 @@
+package com.ayush;
+
+public class primitives
+{
+    public static void main(String[] args) {
+        int rollno = 64;
+        char letter = 'r';
+        float marks = 66.6f;
+        double LargeDecimalNumbers = 245345.25345;
+        long LargeInteger = 242342347463463L;
+        boolean check = false;
+    }
+}
