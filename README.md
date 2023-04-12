@@ -1,2 +1,2 @@
-# Small-Program-in-Java
+# Small-Programs-in-Java
 Syntaxs and Small programs in Java
