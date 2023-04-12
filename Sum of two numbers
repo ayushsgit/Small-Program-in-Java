@@ -17,7 +17,7 @@ public class Sums {
 
 
 
-terminal:
+Output:
 "C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=61888:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Sums
 100
 99
