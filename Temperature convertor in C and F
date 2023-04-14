@@ -1,0 +1,22 @@
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Temperature {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Please enter temp in C : ");
+        double tempF,tempC;
+        tempC = in.nextDouble();
+        tempF = (tempC * 9/5) + 32;
+        System.out.println("temp in F is : " + tempF);
+    }
+}
+
+
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=50301:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Temperature
+Please enter temp in C : 33.445
+temp in F is : 92.201
+
+Process finished with exit code 0
