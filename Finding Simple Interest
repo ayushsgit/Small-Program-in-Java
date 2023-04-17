@@ -1,0 +1,30 @@
+//Write a program to input principal, time, and rate (P, T, R) from the user and find Simple Interest.
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter Principal Amount : ");
+        int P = input.nextInt();
+        System.out.print("Enter Time in years : ");
+        int T = input.nextInt();
+        System.out.print("Enter Rate of Interest in percentage : ");
+        int R = input.nextInt();
+
+        int S = (P*T*R)/100;
+
+        System.out.print("Simple Interest is : " + S);
+    }
+}
+
+
+
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=52467:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Main
+Enter Principal Amount : 3000
+Enter Time in years : 4
+Enter Rate of Interest in percentage : 44
+Simple Interest is : 5280
+Process finished with exit code 0
