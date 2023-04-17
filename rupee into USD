@@ -1,0 +1,24 @@
+//Input currency in rupees and output in USD.
+
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter Indian Currency : ");
+        double rupee = input.nextDouble();
+        double usd = rupee/80;
+        System.out.println(rupee + " is " + usd + " USD");
+    }
+}
+
+
+
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=52719:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Main
+Enter Indian Currency : 100
+100.0 is 1.25 USD
+
+Process finished with exit code 0
