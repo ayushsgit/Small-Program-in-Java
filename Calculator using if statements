@@ -1,0 +1,42 @@
+//Take in two numbers and an operator (+, -, *, /) and calculate the value. (Use if conditions)
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter First Number : ");
+        float num1 = input.nextFloat();
+        System.out.print("Enter Second Number : ");
+        float num2 = input.nextFloat();
+        System.out.print("Enter Calculator Operator : ");
+        String op = input.next();
+
+        if(op.equals("+")){
+            System.out.println(num1 + num2);
+        }
+        else if(op.equals("-")){
+            System.out.println(num1 - num2);
+        }
+        else if(op.equals("*")){
+            System.out.println(num1 * num2);
+        }
+        else if(op.equals("/")){
+            System.out.println(num1 / num2);
+        }
+        else{
+            System.out.println("wrong input by the user!");
+        }
+    }
+}
+
+
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=52583:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Main
+Enter First Number : 33
+Enter Second Number : 44
+Enter Calculator Operator : /
+0.75
+
+Process finished with exit code 0
