@@ -1,0 +1,33 @@
+//Take 2 numbers as input and print the largest number.
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter 1st Number : ");
+        double a = input.nextDouble();
+        System.out.print("Enter 2nd Number : ");
+        double b = input.nextDouble();
+
+        if (a>b){
+            System.out.println("Largest Number is : " + a);
+        }
+        else if(b>a){
+            System.out.println("Largest Number is : " + b);
+        }
+        else{
+            System.out.println("The Numbers are equal");
+        }
+    }
+}
+
+
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=52608:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Main
+Enter 1st Number : 22
+Enter 2nd Number : 33
+Largest Number is : 33.0
+
+Process finished with exit code 0
