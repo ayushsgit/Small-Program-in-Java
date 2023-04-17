@@ -1,0 +1,29 @@
+//To calculate Fibonacci Series up to n numbers.
+
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number till which you want to print fibonacci series : ");
+        int n = input.nextInt();
+        int a = 0, b = 1, c;
+        System.out.print("fibonacci Series till " +n+ " is : ");
+
+        for(int i = 1; i <= n; i++){
+            System.out.print(a + ", ");
+            c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+}
+
+
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=52757:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Main
+Enter the number till which you want to print fibonacci series : 6
+fibonacci Series till 6 is : 0, 1, 1, 2, 3, 5, 
+Process finished with exit code 0
