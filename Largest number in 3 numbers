@@ -1,0 +1,33 @@
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Largest {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int c = in.nextInt();
+
+        // Q: Find the Largest of the 3 numbers
+            int max = a;
+            if (b > max){
+                max = b;
+            }
+            if(c>max){
+                max = c;
+            }
+            System.out.println("max = " + max);
+
+    }
+}
+
+
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=52501:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Largest
+23
+55
+44
+max = 55
+
+Process finished with exit code 0
