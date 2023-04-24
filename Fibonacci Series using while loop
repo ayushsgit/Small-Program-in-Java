@@ -1,0 +1,27 @@
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Largest {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        int a = 0, b = 1;
+        int count = 2;
+
+        while(count <= n){
+            int temp = b;
+            b = a + b;
+            a = temp;
+            count++;
+            System.out.print(a + ", ");
+        }
+    }
+}
+
+
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=50568:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Largest
+10
+1, 1, 2, 3, 5, 8, 13, 21, 34, 
+Process finished with exit code 0
