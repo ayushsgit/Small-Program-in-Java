@@ -1,0 +1,78 @@
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        //Take input from user till user does not press X or x
+        int ans = 0;
+
+        while (true){
+            //Take the operator as input
+            System.out.print("Enter the Operator : ");
+            char op = in.next().trim().charAt(0);
+            if (op == '+' || op == '-' || op == '*' || op == '/' || op == '%'){
+                // input two numbers
+                System.out.print("Enter the two numbers : ");
+                int num1 = in.nextInt();
+                int num2 = in.nextInt();
+
+                if(op == '+'){
+                    ans = num1 + num2;
+                }
+                if(op == '-'){
+                    ans = num1 - num2;
+                }
+                if(op == '*'){
+                    ans = num1 * num2;
+                }
+                if(op == '/'){
+                    if(num2 != 0)
+                    {
+                        ans = num1 / num2;
+                    }
+                    else
+                    {
+                        System.out.println("Error");
+                        break;
+                    }
+                }
+                if(op == '%'){
+                    if(num2 != 0)
+                    {
+                        ans = num1 % num2;
+                    }
+                    else
+                    {
+                        System.out.println("Error");
+                        break;
+                    }
+                }
+                System.out.println(ans);
+            }
+            else if(op == 'X' || op == 'x')
+                {
+                    break;
+                }
+            else
+                {
+                    System.out.println("Invalid Operation!!");;
+                }
+            }
+        }
+}
+
+
+
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=51584:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Calculator
+Enter the Operator : /
+Enter the two numbers : 3
+3
+1
+Enter the Operator : f
+Invalid Operation!!
+Enter the Operator : x
+
+Process finished with exit code 0
