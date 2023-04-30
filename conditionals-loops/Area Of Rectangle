@@ -1,0 +1,30 @@
+//Area Of Rectangle Program
+
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter the length of rectangle : ");
+        double a = in.nextDouble();
+
+        System.out.print("Enter the breadth of rectangle : ");
+        double b = in.nextDouble();
+
+        double area = a * b;
+
+        System.out.print("Area of Rectangle is : " +area);
+    }
+}
+
+/*
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=59425:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Main
+Enter the length of rectangle : 20
+Enter the breadth of rectangle : 211
+Area of Rectangle is : 4220.0
+Process finished with exit code 0
+*/
