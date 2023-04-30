@@ -1,0 +1,29 @@
+//Volume Of Pyramid
+
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter the base area of the pyramid : ");
+        double area = in.nextDouble();
+        System.out.print("Enter the height of the pyramid : ");
+        double h = in.nextDouble();
+
+        double volume = (1.0/3.0) * area * h;
+        System.out.print("Volume Of Pyramid is : " +volume);
+    }
+}
+
+/*
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=59840:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Main
+Enter the base area of the pyramid : 55
+Enter the height of the pyramid : 23
+Volume Of Pyramid is : 421.66666666666663
+Process finished with exit code 0
+
+ */
