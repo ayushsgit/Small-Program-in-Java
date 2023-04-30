@@ -1,0 +1,31 @@
+//Volume Of Cone
+
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter the Radius of the circle of the cone: ");
+        double r = in.nextDouble();
+        System.out.print("Enter the height of the cone : ");
+        double h = in.nextDouble();
+        double pi = Math.PI;
+
+        double volume = (1.0/3.0)*pi*Math.pow(r,2)*h; //1.0 and 3.0 for floating point division
+
+        System.out.print("Volume Of Cone is : " +volume);
+    }
+}
+
+/*
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=59774:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Main
+Enter the Radius of the circle of the cone: 20
+Enter the height of the cone : 44
+Volume Of Cone is : 18430.67690106012
+Process finished with exit code 0
+
+ */
