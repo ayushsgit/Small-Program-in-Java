@@ -1,0 +1,31 @@
+//Area Of Parallelogram
+
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter the base of Parallelogram : ");
+        double a = in.nextDouble();
+
+        System.out.print("Enter the height of Parallelogram : ");
+        double b = in.nextDouble();
+
+        double area = a * b;
+
+        System.out.print("Area Of Parallelogram is : " +area);
+    }
+}
+
+/*
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=59671:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Main
+Enter the base of Parallelogram : 33
+Enter the height of Parallelogram : 45
+Area Of Parallelogram is : 1485.0
+Process finished with exit code 0
+
+ */
