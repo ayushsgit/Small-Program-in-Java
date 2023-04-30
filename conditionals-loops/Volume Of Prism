@@ -1,0 +1,29 @@
+//VVolume Of Prism
+
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter the base area of the prism : ");
+        double area = in.nextDouble();
+        System.out.print("Enter the height of the prism : ");
+        double h = in.nextDouble();
+
+        double volume = area * h;
+        System.out.print("Volume Of Prism is : " +volume);
+    }
+}
+
+/*
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=59818:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Main
+Enter the base area of the prism : 234
+Enter the height of the prism : 76
+Volume Of Prism is : 17784.0
+Process finished with exit code 0
+
+ */
