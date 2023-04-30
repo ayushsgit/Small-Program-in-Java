@@ -1,0 +1,32 @@
+//Area Of Isosceles Triangle
+
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter the length of same side of triangle : ");
+        double a = in.nextDouble();
+
+        System.out.print("Enter the base of triangle : ");
+        double base = in.nextDouble();
+
+        double height = Math.sqrt(Math.pow(a,2) - Math.pow(base/2,2));
+        double area = 0.5 * base * height;
+
+        System.out.print("Area Of Isosceles Triangle is : " +area);
+    }
+}
+
+/*
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=59643:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Main
+Enter the length of same side of triangle : 44
+Enter the base of triangle : 33
+Area Of Isosceles Triangle is : 673.0200127039313
+Process finished with exit code 0
+
+ */
