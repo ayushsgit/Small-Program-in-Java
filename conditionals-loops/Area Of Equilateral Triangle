@@ -1,0 +1,27 @@
+//Area Of Equilateral Triangle
+
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter the Side of Equilateral Triangle : ");
+        double a = in.nextDouble();
+
+        double area = (Math.sqrt(3)/4)*Math.pow(a,2);
+
+        System.out.print("Area Of Equilateral Triangle is : " +area);
+    }
+}
+
+/*
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=59691:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Main
+Enter the Side of Equilateral Triangle : 55
+Area Of Equilateral Triangle is : 1309.8634232239633
+Process finished with exit code 0
+
+ */
