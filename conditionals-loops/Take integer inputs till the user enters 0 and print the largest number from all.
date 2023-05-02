@@ -1,0 +1,40 @@
+//Take integer inputs till the user enters 0 and print the largest number from all.
+
+package com.ayush;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int largest = 0;
+        int number;
+
+        do {
+            System.out.print("Enter the number : ");
+            number = in.nextInt();
+            if(number > largest){
+            largest = number;}
+        }while(number != 0);
+
+        System.out.println("The largest number is : " +largest);
+    }
+}
+
+/*
+Output:
+"C:\Program Files\Java\jdk-20\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=62838:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\first-idea-program\out\production\first-idea-program com.ayush.Main
+Enter the number : 23
+Enter the number : 4
+Enter the number : 54
+Enter the number : 2324
+Enter the number : 23
+Enter the number : 43
+Enter the number : 67
+Enter the number : 456445
+Enter the number : 0
+The largest number is : 456445
+
+Process finished with exit code 0
+
+ */
