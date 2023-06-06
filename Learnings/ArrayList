@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayListExample {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        ArrayList<Integer> list = new ArrayList<>(10);
+
+        //input
+        for (int i = 0; i < 5; i++) {
+            list.add(in.nextInt());
+        }
+
+        //get item at any index
+        for (int i = 0; i < 5; i++) {
+            System.out.print(list.get(i) + ", ");
+        }
+
+    }
+}
+
+
+Output:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=39777:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Arrays/out/production/Arrays ArrayListExample
+1 2 3 54 567 6
+1, 2, 3, 54, 567, 
+Process finished with exit code 0
