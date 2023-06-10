@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+// Find Ncr & Npr in java
+public class questions {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Type N : ");
+        int n = in.nextInt();
+        System.out.print("Type r : ");
+        int r = in.nextInt();
+
+        int Ncr = factorial(n)/(factorial(n-r)*factorial(r));
+        int Npr = factorial(n)/factorial(n-r);
+
+        System.out.println("Ncr : " + Ncr);
+        System.out.println("Npr : " + Npr);
+    }
+
+    static int factorial (int a){
+        if (a == 0){
+            return 1;
+        }
+        if (a == 1){
+            return 1;
+        }
+        else{
+            return factorial(a-1) * a;
+        }
+    }
+}
+
+
+Output:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=35565:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Arrays/out/production/Arrays questions
+Type N : 10
+Type r : 2
+Ncr : 45
+Npr : 90
+
+Process finished with exit code 0
