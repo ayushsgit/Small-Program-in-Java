@@ -1,0 +1,35 @@
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {18, 12, 9, 14, 77, 50};
+        int target = 77;
+        int ans = LinerSearch(arr, target);
+        System.out.println(ans);
+    }
+
+    // search in array: return the index if item found
+    // otherwise if item not found return -1
+    static int LinerSearch(int[] arr, int target) {
+        if (arr.length == 0) {
+            return -1;
+        }
+
+        // run a for loop
+        for (int index = 0; index < arr.length; index++) {
+            // check for element at every index if it is = target
+            int element = arr[index];
+            if (element == target) {
+                return index;
+            }
+        }
+
+        // this line will be executed if none of the target statements have been executed
+        // hence the target not found
+        return -1;
+    }
+}
+
+Option:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=38571:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm Main
+4
+
+Process finished with exit code 0
