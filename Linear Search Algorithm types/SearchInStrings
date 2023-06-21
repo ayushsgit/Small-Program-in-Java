@@ -1,0 +1,39 @@
+import java.util.Arrays;
+
+public class SearchInStrings {
+    public static void main(String[] args) {
+        String name = "Kaido";
+        char target = 'i';
+//        System.out.println(search(name, target));
+        System.out.println(Arrays.toString(name.toCharArray()));
+    }
+    static boolean search2(String str, char target) {
+        if (str.length() == 0) {
+            return false;
+        }
+        for(char ch : str.toCharArray()){
+            if(ch == target){
+                return true;
+            }
+        }
+        return false;
+    }
+    static boolean search(String str, char target){
+        if (str.length() == 0){
+            return false;
+        }
+        for (int index = 0; index < str.length(); index++) {
+            if(str.charAt(index) == target){
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+Option:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=35709:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm SearchInStrings
+true
+
+Process finished with exit code 0
+

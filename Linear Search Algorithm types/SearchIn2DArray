@@ -1,0 +1,29 @@
+import java.util.Arrays;
+
+public class SearchIn2DArray {
+    public static void main(String[] args) {
+        int[][] arr = {{16,2,3},
+                       {54,543,6,99,88,66},
+                       {897,81,93,623}};
+        int target = 66;
+        int[] ans = search(arr, target);
+        System.out.println(Arrays.toString(ans));
+    }
+
+    static int[] search(int[][] str, int target){
+        for (int row = 0; row < str.length; row++) {
+            for (int column = 0; column < str[row].length; column++) {
+                if (str[row][column] == target){
+                    return new int[]{row,column};
+                }
+            }
+        }
+        return new int[]{};
+    }
+}
+
+Option:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=33009:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm SearchIn2DArray
+[1, 5]
+
+Process finished with exit code 0

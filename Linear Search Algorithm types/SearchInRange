@@ -1,0 +1,26 @@
+public class SearchInRange {
+    public static void main(String[] args) {
+        int[] arr = {18, 12, -7, 88, 90, 66};
+        int target = 88;
+
+        System.out.println(search(arr, target, 0, 3));
+    }
+
+    static int search(int[] str, int target, int start, int end){
+        if (str.length == 0){
+            return -1;
+        }
+        for (int index = start; index <= end; index++) {
+            if(str[index] == target){
+                return index;
+            }
+        }
+        return -1;
+    }
+}
+
+Option:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=45241:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm SearchInRange
+3
+
+Process finished with exit code 0
