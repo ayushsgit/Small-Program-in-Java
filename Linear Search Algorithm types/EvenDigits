@@ -1,0 +1,46 @@
+public class EvenDigits {
+    public static void main(String[] args) {
+        int[] nums = {0,-1,33,22,444,4444};
+        int ans = findNumbers(nums);
+        System.out.println(ans);
+    }
+
+    static int findNumbers(int[] nums){
+        int count = 0;
+        for(int num : nums){
+            if(even(num)){
+                count++;
+            }
+        }
+        return count;
+    }
+    //to check the number of digits
+    //function to check whether a number contains even digits or not
+    static boolean even(int num){
+        return digits(num) % 2 == 0;
+    }
+
+    static int digits(int num){
+
+        if(num<0){
+            num = num * -1;
+        }
+
+        if(num == 0){
+            return 1;
+        }
+
+        int numDigit=0;
+        while(num>0){
+            numDigit++;
+            num/=10;}
+        return numDigit;
+    }
+}
+
+
+Option:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=38573:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm EvenDigits
+3
+
+Process finished with exit code 0
