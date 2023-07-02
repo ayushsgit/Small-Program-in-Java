@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class HCF {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter the first number : ");
+        int number1 = in.nextInt();
+
+        System.out.print("Enter the second number : ");
+        int number2 = in.nextInt();
+
+        int hcf = calHCF(number1, number2);
+
+        System.out.println("The HCF of " +number1+ " and " +number2+ " is " +hcf);
+    }
+
+   /* The Euclidean algorithm works based on the principle that the HCF of two numbers is the same as the HCF of the smaller number and the remainder when the larger number is divided by the smaller number. By continuously dividing the larger number by the smaller number and updating the values, the algorithm gradually reduces the numbers until it finds a remainder of 0, indicating that the HCF has been found.
+
+    For example, let's say we want to find the HCF of 24 and 16 using the Euclidean algorithm:
+
+        number1 = 24 and number2 = 16.
+
+        Calculate temp as the remainder of dividing 24 by 16: temp = 24 % 16 = 8.
+
+        Since temp is not equal to 0, update number1 to be the current value of number2 (16) and number2 to be the current value of temp (8).
+
+        Repeat step 2: temp = 16 % 8 = 0.
+
+        Since temp is equal to 0, the HCF is the last non-zero remainder, which is 8.
+
+    Therefore, the HCF of 24 and 16 is 8.*/
+
+    static int calHCF(int number1, int number2){
+        while(number2 != 0) {
+            int temp = number2;
+            number2 = number1 % number2;
+            number1 = temp;
+        }
+
+        return number1;
+    }
+}
+
+
+Output:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=43731:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm HCF
+Enter the first number : 24
+Enter the second number : 16
+The HCF of 24 and 16 is 8
+
+Process finished with exit code 0
