@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class LCM {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter the first number : ");
+        int number1 = in.nextInt();
+
+        System.out.print("Enter the second number : ");
+        int number2 = in.nextInt();
+
+        int lcm = calLCM(number1, number2);
+
+        System.out.println("The LCM of " +number1+ " and " +number2+ " is " +lcm);
+    }
+
+    static int calLCM(int number1, int number2){
+        int hcf = calHCF(number1, number2);
+        // LCM can be calculated using the formula: LCM = (number1 * number2) / HCF
+        int lcm = number1*number2/hcf;
+
+        return lcm;
+    }
+    static int calHCF(int number1, int number2){
+            while (number2 != 0) {
+                int temp = number2;
+                number2 = number1 % number2;
+                number1 = temp;
+            }
+
+            return number1;
+    }
+}
+
+
+Output:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=34657:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm LCM
+Enter the first number : 24
+Enter the second number : 16
+The LCM of 24 and 16 is 48
+
+Process finished with exit code 0
