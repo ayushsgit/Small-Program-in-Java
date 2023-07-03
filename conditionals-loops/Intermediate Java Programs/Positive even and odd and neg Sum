@@ -1,0 +1,47 @@
+// Write a program to print the sum of negative numbers,
+// sum of positive even numbers and the sum of positive odd
+// numbers from a list of numbers (N) entered by the user.
+// The list terminates when the user enters a zero.
+
+import java.util.Scanner;
+public class Sum {
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+        int SumNeg = 0;
+        int SumPosEven = 0;
+        int SumPosOdd = 0;
+
+        System.out.print("Enter numbers ('0' will terminate ) : ");
+
+        while (true) {
+            int num = in.nextInt();
+
+            if (num == 0) {
+                break;
+            } else if (num < 0) {
+                SumNeg += num;
+            } else if (num % 2 == 0) {
+                SumPosEven += num;
+            } else {
+                SumPosOdd += num;
+            }
+
+        }
+
+        System.out.println("SumNeg is : " +SumNeg);
+        System.out.println("SumPosEven is : " +SumPosEven);
+        System.out.println("SumPosOdd is : " +SumPosOdd);
+
+    }
+}
+
+Output:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=46061:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm Sum
+Enter numbers ('0' will terminate ) : 1 33 44 -44 -22 4 5 6 7 8 9
+0
+SumNeg is : -66
+SumPosEven is : 62
+SumPosOdd is : 55
+
+Process finished with exit code 0
