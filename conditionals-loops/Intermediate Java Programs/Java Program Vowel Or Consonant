@@ -1,0 +1,39 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class VowelConsonantProgram {
+    public static void main(String[] args){
+        Scanner in = new Scanner(System.in);
+
+        System.out.print("Enter a character : ");
+        char letter = in.next().charAt(0);
+
+        boolean ans = isvowel(letter);
+        if(ans == true){System.out.println("Vowel");}
+        else {
+            System.out.println("Consonant");
+        }
+    }
+
+    static boolean isvowel(char l){
+        if(l == 'a' || l == 'e' || l =='i' || l == 'o' || l == 'u'){
+            return true;
+        }
+        return false;
+    }
+}
+
+
+Output 1:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=35057:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm VowelConsonantProgram
+Enter a character : g
+Consonant
+
+Process finished with exit code 0
+
+Output 2:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=37589:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm VowelConsonantProgram
+Enter a character : u
+Vowel
+
+Process finished with exit code 0
