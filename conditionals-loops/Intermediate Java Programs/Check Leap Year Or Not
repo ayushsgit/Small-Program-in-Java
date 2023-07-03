@@ -1,0 +1,49 @@
+//To check if a year is a leap year, there are several methods:
+//
+//    Divisibility by 4: Any year that is evenly divisible by 4 is a leap year
+//                       For example, 1988, 1992, and 1996 are leap years.
+//    Divisibility by 100: If a year is evenly divisible by 100, it is not a leap year, unless it is also evenly divisible by 400. For example, 1900 was not a leap year, but 2000 was
+//    Divisibility by 400: A century year (a year ending in 00) is a leap year only if it is perfectly divisible by 400. For example, 1600 and 2000 were leap years, but 1700, 1800, and 1900 were not
+import java.util.Scanner;
+
+public class LeapYear {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int num = in.nextInt();
+
+        boolean ans = isLeap(num);
+        if(ans){
+            System.out.println(num + " Is leap year");
+        }else {
+            System.out.println(num + " Is not leap year");
+        }
+    }
+
+    static boolean isLeap(int num){
+        if (num % 4 == 0){
+            if(num % 100 == 0){
+                if (num % 400 == 0){
+                    return true;
+                }
+            }else {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+Output 1:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=42155:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm LeapYear
+Enter the number : 1900
+1900 Is not leap year
+
+Process finished with exit code 0
+
+Output 2:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=40415:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm LeapYear
+Enter the number : 2008
+2008 Is leap year
+
+Process finished with exit code 0
