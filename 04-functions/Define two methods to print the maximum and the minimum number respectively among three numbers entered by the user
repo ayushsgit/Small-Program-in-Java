@@ -1,1 +1,57 @@
 //Define two methods to print the maximum and the minimum number respectively among three numbers entered by the user.
+
+package functions;
+
+import java.util.Scanner;
+
+public class Max {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter number 1 : ");
+        int num1 = in.nextInt();
+
+        System.out.print("Enter number 2 : ");
+        int num2 = in.nextInt();
+
+        System.out.print("Enter number 3 : ");
+        int num3 = in.nextInt();
+
+        int ans1 = min(num1,num2,num3);
+        int ans2 = max(num1,num2,num3);
+
+        System.out.println("Min : " +ans1);
+        System.out.println("Max : " +ans2);
+    }
+
+    static int min(int num1,int num2, int num3){
+       int min = num1;
+       if(min>num2){
+           min = num2;
+       }
+       if (min>num3) {
+           min = num3;
+       }
+        return min;
+    }
+
+    static int max(int num1,int num2, int num3){
+        int max = num1;
+        if(max<num2){
+            max = num2;
+        }
+        if (max<num3) {
+            max = num3;
+        }
+        return max;
+    }
+}
+
+Output:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=41635:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm functions.Max
+Enter number 1 : 7234
+Enter number 2 : 2848
+Enter number 3 : -1000000
+Min : -1000000
+Max : 7234
+
+Process finished with exit code 0
