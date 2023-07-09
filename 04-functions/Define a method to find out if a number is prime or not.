@@ -1,0 +1,34 @@
+//Define a method to find out if a number is prime or not.
+
+import java.util.Scanner;
+
+public class Prime {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter number : ");
+        int num = in.nextInt();
+
+        boolean ans = isPrime(num);
+        if(ans) {
+            System.out.println("The number " + num + " is Prime");
+        }else {
+            System.out.println("The number " + num + " is not Prime");
+        }
+    }
+
+    static boolean isPrime(int num){
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if(num % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+Output:
+/home/luffy/.jdks/openjdk-20.0.1/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=42863:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm Prime
+Enter number : 49
+The number 49 is not Prime
+
+Process finished with exit code 0
