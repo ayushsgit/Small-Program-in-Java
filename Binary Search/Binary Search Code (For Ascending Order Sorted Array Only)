@@ -1,6 +1,6 @@
 public class BinarySearch {
     public static void main(String[] args) {
-        //The array is sorted in Ascending or Descending order
+        //The array is sorted in Ascending order
         int[] arr = {-22, -11, -7, 0, 2, 3, 4, 11, 133, 2000, 20000, 1900000};
         int target = 4;
         int ans = BinarySearch(arr,target);
