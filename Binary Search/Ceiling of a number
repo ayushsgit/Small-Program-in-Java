@@ -1,4 +1,4 @@
-//Ceiling of a number means : A number greater than or equal to target
+//Ceiling of a number means : The smallest number greater than or equal to target number in an array
 
 public class CeilingOfANum {
     public static void main(String[] args) {
@@ -40,7 +40,7 @@ public class CeilingOfANum {
         }
         return start; // number at index start is greater than target , since now end is smaller than start so the number lies between end 
                       // and start but since it does not exist the required number greater than target is at the new start index , 
-                      //ie. when end is less then start
+                      //ie. when end is less then start, ie. start = end + 1
     }
 }
 
