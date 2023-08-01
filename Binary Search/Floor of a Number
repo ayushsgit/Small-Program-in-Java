@@ -41,6 +41,8 @@ public class FloorOfANum {
         return end; // number at index end is smaller than target , since now end is smaller than start so the number lies between end 
                     // and start but since it does not exist the required number smaller than target is at the new end index , 
                     // ie. when end is less then start, ie. start = end + 1
+
+                    //return start if Desc Order Array
     }
 }
 
