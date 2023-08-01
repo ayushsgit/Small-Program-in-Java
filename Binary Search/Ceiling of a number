@@ -5,7 +5,7 @@ public class CeilingOfANum {
         int[] arr = {1,23,33,56,100,9999999};
         int target = 24;
         int ans = OrderAgnosticBS(arr,target);
-        System.out.println("Celing of " +target+ " is at index : " +arr[ans]);
+        System.out.println("Celing of " +target+ " is : " +arr[ans]);
     }
     
     static int OrderAgnosticBS(int[] arr, int target){
@@ -45,8 +45,7 @@ public class CeilingOfANum {
 }
 
 Output : 
-/home/luffy/.jdks/openjdk-20.0.2/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=40185:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm CeilingOfANum
-Celing of 24 is at index : 33
+/home/luffy/.jdks/openjdk-20.0.2/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=32873:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm CeilingOfANum
+Celing of 24 is : 33
 
 Process finished with exit code 0
-
