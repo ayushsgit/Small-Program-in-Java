@@ -1,0 +1,48 @@
+import java.util.Arrays;
+// https://www.geeksforgeeks.org/find-position-element-sorted-array-infinite-numbers/
+public class quess {
+    public static void main(String[] args) {
+        int arr[] = { 3, 5, 7, 9, 10, 90, 100, 130, 140, 160, 170 };
+        int target = 10;
+        System.out.println(ans(arr, target));
+    }
+
+    static int ans(int[]arr, int target){
+        // first find range
+        // first start with box of size 2
+        int start = 0;
+        int end = 1;
+
+        //condition for target to lie in range
+        while(target > arr[end]){
+            int temp = end + 1; // this is my new start
+            // double the box value
+            // end = previous end + sizeofbox*2;
+            end = end + (end - start + 1) * 2 ;
+            start = temp;
+        }
+
+        return binarySearch(arr, target, start, end);
+    }
+    static int binarySearch(int[] nums, int target, int start, int end) {
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            if (target < nums[mid]) {
+                end = mid - 1;
+            } else if (target > nums[mid]) {
+                start = mid + 1;
+            } else if (target == nums[mid]) {
+                return mid;
+            }
+        }
+        return -1;
+    }
+}
+
+
+Output : 
+/home/luffy/.jdks/openjdk-20.0.2/bin/java -javaagent:/app/IDEA-C/lib/idea_rt.jar=42221:/app/IDEA-C/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/Algorithm/out/production/Algorithm quess
+4
+
+Process finished with exit code 0
