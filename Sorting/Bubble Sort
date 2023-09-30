@@ -8,8 +8,10 @@ public class BubbleSort {
     }
 
     static void bubble(int[] arr){
+        boolean swapped;
         //run the steps n - 1 times
         for (int i = 0; i < arr.length; i++) {
+            swapped = false;
             //for each step, max item will come at the last respective index
             for (int j = 1; j < arr.length - i; j++) {
                 //swap if the item is smaller than the previous item
@@ -18,7 +20,12 @@ public class BubbleSort {
                     int temp = arr[j];
                     arr[j] = arr[j - 1];
                     arr[j - 1] = temp;
+                    swapped = true;
                 }
+            }
+        // if you did not swapped for a particular value of i, it means the array is sorted hence stop the program
+            if(!swapped){ // !false = true
+                break;
             }
         }
     }
@@ -26,7 +33,7 @@ public class BubbleSort {
 
 
 /*
-C:\Users\ayush\.jdks\openjdk-21\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=50947:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\DSA\out\production\DSA BubbleSort
+C:\Users\ayush\.jdks\openjdk-21\bin\java.exe "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=51017:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath C:\Users\ayush\Desktop\DSA\out\production\DSA BubbleSort
 [1, 2, 3, 4, 5]
 
 Process finished with exit code 0
