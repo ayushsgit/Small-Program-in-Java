@@ -24,16 +24,6 @@ public class Main {
         arr[first] = arr[second];
         arr[second] = temp;
     }
-
-    static int getMaxIndex(int[] arr, int start, int end) {
-        int max = start;
-        for (int i = start; i <= end; i++) {
-            if(arr[max] < arr[i]){
-                max = i;
-            }
-        }
-        return max;
-    }
 }
 
 /*
@@ -41,5 +31,5 @@ public class Main {
 [1, 2, 3, 4, 5]
 
 Process finished with exit code 0
- 
+
 */
