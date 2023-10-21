@@ -1,0 +1,35 @@
+// When given numbers 1 to N use Cyclic Sort
+import java.util.Arrays;
+
+public class CyclicSort {
+    public static void main(String[] args) {
+        int[] arr = {3, 5, 2, 1, 4};
+        sort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+
+    static void sort(int[] arr){
+        int i = 0;
+        while(i < arr.length){
+            int correct = arr[i] - 1;
+            if(arr[i] != arr[correct]){
+                swap(arr, i, correct);
+            } else {
+                i++;
+            }
+        }
+    }
+    static void swap(int[] arr, int x, int y){
+        int temp = arr[x];
+        arr[x] = arr[y];
+        arr[y] = temp;
+    }
+}
+
+/*
+/home/luffy/.jdks/corretto-20.0.2.1/bin/java -javaagent:/home/luffy/idea-IC-232.9921.47/lib/idea_rt.jar=35399:/home/luffy/idea-IC-232.9921.47/bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath /home/luffy/IdeaProjects/DSA/out/production/DSA CyclicSort
+[1, 2, 3, 4, 5]
+
+Process finished with exit code 0
+
+*/
